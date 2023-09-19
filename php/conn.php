@@ -7,8 +7,8 @@ $DB_USER = "root";
 $DB_PASSWORD = "";
 
 
-$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$conn = mysqli_connect($DB_HOST, $DB_USER, $DB_PASSWORD, $DB_NAME);
 
-if (!$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname)) {
+if (!$conn = mysqli_connect($DB_HOST, $DB_USER, $DB_PASSWORD, $DB_NAME)) {
     die("Failed To Connect");
 }
