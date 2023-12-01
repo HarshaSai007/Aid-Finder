@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- Include Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Include Agency.js -->
+    <script src="Agency.js"></script>
+    <style>
+      /* Add this CSS to your stylesheet */
+.leaflet-popup-content-wrapper {
+  text-align: center; /* Center align the content */
+  border-radius: 15px;
+}
+
+.leaflet-popup-content-wrapper button {
+  display: block;
+  margin: 8px auto; /* Add some space between buttons */
+  padding: 8px 16px; /* Adjust padding for better button size */
+  font-size: 14px; /* Adjust font size if needed */
+  border-radius: 25px;
+}
+
+.leaflet-popup-content-wrapper button:nth-child(2) {
+  background-color: #007bff; /* Change background color of the second button */
+  color: #fff; /* Change text color of the second button */
+  border: none;
+  border-radius: 25px;
+
+}
+
+.leaflet-popup-content-wrapper button:nth-child(2):hover {
+  background-color: #0056b3; /* Change hover background color of the second button */
+  border-radius: 25px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="title">moblie</div>
+        <div class="data" id="moblie"></div>
+      </div>
+      <div class="title">name</div>
+      <div class="data" id="name"></div>
+      <div class="row">
+        <div class="title">Latitude, Longitude</div>
+        <div class="data">
+          <span id="lat"></span>, <span id="lng"></span>
+        </div>
+        <input type="text" id="name">
+
+      </div>
+
+      <div id="map" style="height: 500px;"></div> <!-- Added height style -->
+    
+    </body>
+</html>
