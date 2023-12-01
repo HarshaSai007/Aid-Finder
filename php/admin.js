@@ -1,5 +1,6 @@
 var track = {
   // (A) INIT
+  rider_id: rider_id,
   delay: 10000, // delay between location refresh
   timer: null, // interval timer
   hWrap: null, // html <div> wrapper
@@ -18,15 +19,6 @@ var track = {
     // (B2) AJAX FETCH
     fetch("ajax_track.php", { method: "POST", body: data })
       .then((res) => res.json())
-      .then((data) => {
-        for (let r of data) {
-          let row = document.createElement("div");
-          row.className = "row";
-          row.innerHTML = `<div class="title">[${r.track_time}] Rider ${r.rider_id}</div>
-           <div class="data">${r.track_lat}, ${r.track_lng}</div>`;
-          track.hWrap.appendChild(row);
-        }
-      })
       .catch((err) => track.error(err));
   },
 
